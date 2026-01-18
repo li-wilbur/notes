@@ -1,0 +1,48 @@
+site_name: 个人笔记
+site_url: https://li-wilbur.github.io/notes/  # Placeholder, user should update
+repo_url: https://github.com/li-wilbur/notes  # Placeholder
+repo_name: notes
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.follow
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+# Auto-discovery of navigation is enabled by default when 'nav' is omitted.
+# This ensures all new files and folders are automatically added.
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+plugins:
+  - search
