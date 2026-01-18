@@ -9,10 +9,17 @@ theme:
   features:
     - navigation.instant
     - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - navigation.expand
     - navigation.top
     - toc.follow
+    - content.code.copy
+    - content.tooltips
+  font:
+    text: Roboto
+    code: Roboto Mono
   palette:
     - scheme: default
       primary: indigo
