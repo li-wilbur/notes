@@ -39,7 +39,7 @@ export default withPwa(defineConfig({
     // 导航栏
     nav: [
       { text: '首页', link: '/' },
-      ...generateNavItems(['Kubernetes', 'Linux', 'SQL']),
+      ...generateNavItems(['Kubernetes', 'Linux', 'SQL', 'Python']),
       {
         text: '更多',
         items: generateNavItems([
@@ -55,7 +55,8 @@ export default withPwa(defineConfig({
       '项目文档',
       'SQL',
       'Linux',
-      'Kubernetes'
+      'Kubernetes',
+      'Python'
     ].map(dir => ({
       documentRootPath: 'docs',
       scanStartPath: dir,

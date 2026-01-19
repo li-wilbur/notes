@@ -22,6 +22,10 @@ features:
     details: Linux 系统管理、运维命令与Shell脚本技巧。
     icon: 🐧
     link: /Linux/lsof详解
+  - title: Python
+    details: Python 编程、库详解与实战技巧。
+    icon: 🐍
+    link: /Python/基础库/python-re详解
   - title: SQL
     details: 数据库查询、优化与管理技巧汇总。
     icon: 💾
