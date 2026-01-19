@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { withPwa } from '@vite-pwa/vitepress'
+import { generateSidebar } from 'vitepress-sidebar'
 
 export default withPwa(defineConfig({
   base: '/notes/',
@@ -41,65 +42,55 @@ export default withPwa(defineConfig({
       { text: '项目文档', link: '/项目文档/API参考/用户模块接口' },
     ],
 
-    // 侧边栏
-    sidebar: {
-      '/技术笔记/': [
-        {
-          text: '前端开发',
-          collapsed: false,
-          items: [
-            { text: 'React 核心概念', link: '/技术笔记/前端开发/React核心概念' }
-          ]
-        }
-      ],
-      '/学习笔记/': [
-        {
-          text: '机器学习',
-          collapsed: false,
-          items: [
-            { text: '神经网络基础', link: '/学习笔记/机器学习/神经网络基础' }
-          ]
-        }
-      ],
-      '/日常记录/': [
-        {
-          text: '周报',
-          collapsed: false,
-          items: [
-            { text: '2023-12-01 周总结', link: '/日常记录/2023-12-01-周总结' }
-          ]
-        }
-      ],
-      '/项目文档/': [
-        {
-          text: '使用指南',
-          collapsed: false,
-          items: [
-            { text: '如何发布新笔记', link: '/项目文档/使用指南/发布指南' }
-          ]
-        },
-        {
-          text: 'API 参考',
-          collapsed: false,
-          items: [
-            { text: '用户模块接口', link: '/项目文档/API参考/用户模块接口' }
-          ]
-        }
-      ],
-      '/资源整理/': [
-        {
-          text: '推荐',
-          collapsed: false,
-          items: [
-            { text: '优质博客推荐', link: '/资源整理/优质博客推荐' }
-          ]
-        }
-      ]
-    },
+    // 侧边栏 (自动生成)
+    sidebar: generateSidebar([
+      {
+        documentRootPath: 'docs',
+        scanStartPath: '技术笔记',
+        resolvePath: '/技术笔记/',
+        useTitleFromFileHeading: true,
+        collapsed: false
+      },
+      {
+        documentRootPath: 'docs',
+        scanStartPath: '学习笔记',
+        resolvePath: '/学习笔记/',
+        useTitleFromFileHeading: true,
+        collapsed: false
+      },
+      {
+        documentRootPath: 'docs',
+        scanStartPath: '日常记录',
+        resolvePath: '/日常记录/',
+        useTitleFromFileHeading: true,
+        collapsed: false
+      },
+      {
+        documentRootPath: 'docs',
+        scanStartPath: '项目文档',
+        resolvePath: '/项目文档/',
+        useTitleFromFileHeading: true,
+        collapsed: false
+      },
+      {
+        documentRootPath: 'docs',
+        scanStartPath: '资源整理',
+        resolvePath: '/资源整理/',
+        useTitleFromFileHeading: true,
+        collapsed: false
+      },
+      {
+        documentRootPath: 'docs',
+        scanStartPath: 'SQL',
+        resolvePath: '/SQL/',
+        useTitleFromFileHeading: true,
+        collapsed: false
+      }
+    ]),
 
     // 社交链接
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/your-github-user/notes' }
+      { icon: 'github', link: 'https://github.com/li-wilbur/notes' }
     ],
 
     // 搜索配置
@@ -124,7 +115,7 @@ export default withPwa(defineConfig({
     
     // 编辑链接
     editLink: {
-      pattern: 'https://github.com/your-github-user/notes/edit/master/docs/:path',
+      pattern: 'https://github.com/li-wilbur/notes/edit/master/docs/:path',
       text: '在 GitHub 上编辑此页'
     }
   }
