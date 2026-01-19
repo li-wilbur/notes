@@ -1,11 +1,12 @@
 import { defineConfig } from 'vitepress'
 import { withPwa } from '@vite-pwa/vitepress'
 import { generateSidebar } from 'vitepress-sidebar'
+import { generateNavItems } from './utils'
 
 export default withPwa(defineConfig({
   base: '/notes/',
   title: "Notes",
-  description: "现代化个人知识库，记录技术、学习与生活",
+  description: "现代化个人知识库",
   lang: 'zh-CN',
   head: [['link', { rel: 'icon', href: '/notes/favicon.svg' }]],
   
@@ -38,17 +39,15 @@ export default withPwa(defineConfig({
     // 导航栏
     nav: [
       { text: '首页', link: '/' },
-      { text: '技术笔记', link: '/技术笔记/前端开发/React核心概念' },
-      { text: '学习笔记', link: '/学习笔记/机器学习/神经网络基础' },
-      { text: '项目文档', link: '/项目文档/API参考/用户模块接口' },
+      ...generateNavItems(['技术笔记', '学习笔记', '项目文档']),
       {
         text: '更多',
-        items: [
-          { text: 'SQL', link: '/SQL/Mysql/Mysql8用户授权' },
-          { text: '日常记录', link: '/日常记录/2023-12-01-周总结' },
-          { text: '资源整理', link: '/资源整理/优质博客推荐' },
-          { text: 'Linux', link: '/Linux/lsof详解' }
-        ]
+        items: generateNavItems([
+          'SQL',
+          '日常记录',
+          '资源整理',
+          'Linux'
+        ])
       }
     ],
 
