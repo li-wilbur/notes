@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 import { withPwa } from '@vite-pwa/vitepress'
 
 export default withPwa(defineConfig({
+  base: '/notes/',
   title: "个人笔记",
   description: "现代化个人知识库，记录技术、学习与生活",
   lang: 'zh-CN',
