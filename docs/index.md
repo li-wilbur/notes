@@ -11,7 +11,7 @@ hero:
       link: /技术笔记/前端开发/React核心概念
     - theme: alt
       text: GitHub
-      link: https://github.com/your-github-user/notes
+      link: https://github.com/li-wilbur/notes
 
 features:
   - title: 技术笔记
