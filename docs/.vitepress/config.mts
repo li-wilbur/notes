@@ -72,6 +72,13 @@ export default withPwa(defineConfig({
       ],
       '/项目文档/': [
         {
+          text: '使用指南',
+          collapsed: false,
+          items: [
+            { text: '如何发布新笔记', link: '/项目文档/使用指南/发布指南' }
+          ]
+        },
+        {
           text: 'API 参考',
           collapsed: false,
           items: [
