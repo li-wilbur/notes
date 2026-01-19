@@ -4,7 +4,7 @@
 ![Build Status](https://github.com/li-wilbur/notes/actions/workflows/deploy.yml/badge.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-这是一个基于 [VitePress](https://vitepress.dev/) 构建的现代化个人知识库，旨在记录技术沉淀、学习思考与生活点滴。
+这是一个基于 [VitePress](https://vitepress.dev/) 构建的现代化个人知识库。
 
 👉 [**在线访问**](https://li-wilbur.github.io/notes/)
 

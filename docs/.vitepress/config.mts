@@ -46,7 +46,8 @@ export default withPwa(defineConfig({
         items: [
           { text: 'SQL', link: '/SQL/Mysql/Mysql8用户授权' },
           { text: '日常记录', link: '/日常记录/2023-12-01-周总结' },
-          { text: '资源整理', link: '/资源整理/优质博客推荐' }
+          { text: '资源整理', link: '/资源整理/优质博客推荐' },
+          { text: 'Linux', link: '/Linux/lsof详解' }
         ]
       }
     ],
