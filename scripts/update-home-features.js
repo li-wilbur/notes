@@ -15,7 +15,8 @@ const categoryMeta = {
   '项目文档': { icon: '🚀', details: '个人项目的详细开发文档、API 接口说明及架构设计。' },
   '日常记录': { icon: '📝', details: '记录生活点滴、周报总结与个人随想。' },
   '资源整理': { icon: '🔗', details: '收藏优质文章、工具、开源项目与学习资源。' },
-  'SQL': { icon: '💾', details: '数据库查询、优化与管理技巧汇总。' }
+  'SQL': { icon: '💾', details: '数据库查询、优化与管理技巧汇总。' },
+  'Linux': { icon: '🐧', details: 'Linux 系统管理、运维命令与Shell脚本技巧。' }
 };
 
 // 默认信息

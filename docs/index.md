@@ -14,6 +14,10 @@ hero:
   #     link: https://github.com/li-wilbur/notes
 
 features:
+  - title: Linux
+    details: Linux 系统管理、运维命令与Shell脚本技巧。
+    icon: 🐧
+    link: /Linux/lsof详解
   - title: SQL
     details: 数据库查询、优化与管理技巧汇总。
     icon: 💾

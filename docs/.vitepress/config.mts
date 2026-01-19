@@ -58,7 +58,8 @@ export default withPwa(defineConfig({
       '日常记录',
       '项目文档',
       '资源整理',
-      'SQL'
+      'SQL',
+      'Linux'
     ].map(dir => ({
       documentRootPath: 'docs',
       scanStartPath: dir,
