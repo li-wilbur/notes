@@ -1,8 +1,8 @@
-以下是 Helm 的常用命令及使用示例，适合快速上手和日常操作：
+# Helm 常用命令以及使用示例
 
 ---
 
-### **1. 仓库管理**
+## **1. 仓库管理**
 | 命令 | 说明 | 示例 |
 | --- | --- | --- |
 | `helm repo add` | 添加 Chart 仓库 | `helm repo add bitnami https://charts.bitnami.com/bitnami` |
@@ -13,7 +13,7 @@
 
 ---
 
-### **2. 安装/升级应用**
+## **2. 安装/升级应用**
 | 命令 | 说明 | 示例 |
 | --- | --- | --- |
 | `helm install` | 部署应用 | `helm install my-nginx bitnami/nginx` |
@@ -23,7 +23,7 @@
 
 ---
 
-### **3. 查看信息**
+## **3. 查看信息**
 | 命令 | 说明 | 示例 |
 | --- | --- | --- |
 | `helm list` | 查看已部署的 Release | `helm list` 或 `helm ls` |
@@ -34,7 +34,7 @@
 
 ---
 
-### **4. 卸载/回滚**
+## **4. 卸载/回滚**
 | 命令 | 说明 | 示例 |
 | --- | --- | --- |
 | `helm uninstall` | 卸载应用 | `helm uninstall my-nginx` |
@@ -43,7 +43,7 @@
 
 ---
 
-### **5. 搜索 Chart**
+## **5. 搜索 Chart**
 | 命令 | 说明 | 示例 |
 | --- | --- | --- |
 | `helm search hub` | 从 Artifact Hub 搜索 Chart | `helm search hub nginx` |
@@ -52,7 +52,7 @@
 
 ---
 
-### **6. 本地 Chart 操作**
+## **6. 本地 Chart 操作**
 | 命令 | 说明 | 示例 |
 | --- | --- | --- |
 | `helm create` | 创建新 Chart 模板 | `helm create my-chart` |
@@ -62,7 +62,7 @@
 
 ---
 
-### **7. 其他常用命令**
+## **7. 其他常用命令**
 | 命令 | 说明 | 示例 |
 | --- | --- | --- |
 | `helm dependency update` | 更新 Chart 依赖 | `helm dependency update ./my-chart` |
@@ -72,7 +72,7 @@
 
 ---
 
-### **示例场景**
+## **示例场景**
 1. **安装 MySQL 并指定密码**  
 
 ```bash
@@ -99,7 +99,7 @@ helm rollback my-app 2  # 回滚到历史版本 2
 
 ---
 
-### **续写示例场景**
+## **续写示例场景**
 4. **测试模板渲染（不实际安装）**  
 
 ```bash
@@ -148,7 +148,7 @@ helm install my-app --replace ./my-chart  # 当同名 Release 已存在时强制
 
 ---
 
-### **高级调试场景**
+## **高级调试场景**
 1. **模拟升级并对比变化**  
 
 ```bash
