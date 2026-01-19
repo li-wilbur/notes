@@ -39,14 +39,12 @@ export default withPwa(defineConfig({
     // 导航栏
     nav: [
       { text: '首页', link: '/' },
-      ...generateNavItems(['技术笔记', '学习笔记', '项目文档']),
+      ...generateNavItems(['Kubernetes', 'Linux', 'SQL']),
       {
         text: '更多',
         items: generateNavItems([
-          'SQL',
-          '日常记录',
-          '资源整理',
-          'Linux'
+          '技术笔记',
+          '项目文档'
         ])
       }
     ],
@@ -54,12 +52,10 @@ export default withPwa(defineConfig({
     // 侧边栏 (自动生成)
     sidebar: generateSidebar([
       '技术笔记',
-      '学习笔记',
-      '日常记录',
       '项目文档',
-      '资源整理',
       'SQL',
-      'Linux'
+      'Linux',
+      'Kubernetes'
     ].map(dir => ({
       documentRootPath: 'docs',
       scanStartPath: dir,
