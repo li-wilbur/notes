@@ -1,0 +1,31 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "这是一个基于 [Docsify](https://docsify.js.org/) 构建的个人笔记站点。",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/li-wilbur/notes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/li-wilbur/notes/issues"
+  },
+  "homepage": "https://github.com/li-wilbur/notes#readme",
+  "devDependencies": {
+    "@vite-pwa/vitepress": "^1.1.0",
+    "vite-plugin-pwa": "^1.2.0",
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.26"
+  }
+}
