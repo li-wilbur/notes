@@ -1,14 +1,14 @@
 {
   "name": "notes",
   "version": "1.0.0",
-  "description": "这是一个基于 [Docsify](https://docsify.js.org/) 构建的个人笔记站点。",
+  "description": "这是一个基于 VitePress 构建的个人笔记站点。",
   "main": "index.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
+    "docs:dev": "node scripts/update-home-features.js && vitepress dev docs",
+    "docs:build": "node scripts/update-home-features.js && vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
   "repository": {

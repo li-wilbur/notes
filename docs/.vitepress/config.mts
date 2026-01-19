@@ -4,15 +4,16 @@ import { generateSidebar } from 'vitepress-sidebar'
 
 export default withPwa(defineConfig({
   base: '/notes/',
-  title: "个人笔记",
+  title: "Notes",
   description: "现代化个人知识库，记录技术、学习与生活",
   lang: 'zh-CN',
+  head: [['link', { rel: 'icon', href: '/notes/favicon.svg' }]],
   
   // PWA 配置
   pwa: {
     outDir: '.vitepress/dist',
     registerType: 'autoUpdate',
-    includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
+    includeAssets: ['favicon.svg'],
     manifest: {
       name: '个人笔记',
       short_name: 'Notes',
@@ -20,14 +21,14 @@ export default withPwa(defineConfig({
       theme_color: '#ffffff',
       icons: [
         {
-          src: 'pwa-192x192.png',
+          src: 'pwa-192x192.svg',
           sizes: '192x192',
-          type: 'image/png'
+          type: 'image/svg+xml'
         },
         {
-          src: 'pwa-512x512.png',
+          src: 'pwa-512x512.svg',
           sizes: '512x512',
-          type: 'image/png'
+          type: 'image/svg+xml'
         }
       ]
     }
@@ -40,53 +41,31 @@ export default withPwa(defineConfig({
       { text: '技术笔记', link: '/技术笔记/前端开发/React核心概念' },
       { text: '学习笔记', link: '/学习笔记/机器学习/神经网络基础' },
       { text: '项目文档', link: '/项目文档/API参考/用户模块接口' },
+      {
+        text: '更多',
+        items: [
+          { text: 'SQL', link: '/SQL/Mysql/Mysql8用户授权' },
+          { text: '日常记录', link: '/日常记录/2023-12-01-周总结' },
+          { text: '资源整理', link: '/资源整理/优质博客推荐' }
+        ]
+      }
     ],
 
     // 侧边栏 (自动生成)
     sidebar: generateSidebar([
-      {
-        documentRootPath: 'docs',
-        scanStartPath: '技术笔记',
-        resolvePath: '/技术笔记/',
-        useTitleFromFileHeading: true,
-        collapsed: false
-      },
-      {
-        documentRootPath: 'docs',
-        scanStartPath: '学习笔记',
-        resolvePath: '/学习笔记/',
-        useTitleFromFileHeading: true,
-        collapsed: false
-      },
-      {
-        documentRootPath: 'docs',
-        scanStartPath: '日常记录',
-        resolvePath: '/日常记录/',
-        useTitleFromFileHeading: true,
-        collapsed: false
-      },
-      {
-        documentRootPath: 'docs',
-        scanStartPath: '项目文档',
-        resolvePath: '/项目文档/',
-        useTitleFromFileHeading: true,
-        collapsed: false
-      },
-      {
-        documentRootPath: 'docs',
-        scanStartPath: '资源整理',
-        resolvePath: '/资源整理/',
-        useTitleFromFileHeading: true,
-        collapsed: false
-      },
-      {
-        documentRootPath: 'docs',
-        scanStartPath: 'SQL',
-        resolvePath: '/SQL/',
-        useTitleFromFileHeading: true,
-        collapsed: false
-      }
-    ]),
+      '技术笔记',
+      '学习笔记',
+      '日常记录',
+      '项目文档',
+      '资源整理',
+      'SQL'
+    ].map(dir => ({
+      documentRootPath: 'docs',
+      scanStartPath: dir,
+      resolvePath: `/${dir}/`,
+      useTitleFromFileHeading: true,
+      collapsed: false
+    }))),
 
     // 社交链接
     socialLinks: [
@@ -101,7 +80,7 @@ export default withPwa(defineConfig({
     // 页脚
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2024-present'
+      copyright: 'Copyright © 2026-present'
     },
 
     // 文档最后更新时间
