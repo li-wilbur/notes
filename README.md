@@ -1,30 +1,42 @@
-# 欢迎来到我的个人笔记
+# 个人笔记 (Docsify)
 
-这是一个使用 Docsify 构建的现代化个人笔记页面，包含了技术学习、项目文档、日常记录等内容。
+这是一个基于 [Docsify](https://docsify.js.org/) 构建的个人笔记站点。
 
-## 快速开始
+## 目录结构
 
-### 目录结构
+```
+.
+├── docs/                  # 文档根目录
+│   ├── index.html         # Docsify 入口文件
+│   ├── _sidebar.md        # 侧边栏配置
+│   ├── README.md          # 首页内容
+│   ├── 技术笔记/
+│   ├── 学习笔记/
+│   ├── 日常记录/
+│   ├── 项目文档/
+│   └── 资源整理/
+└── README.md              # 项目说明
+```
 
-- **技术笔记**：记录各种技术学习笔记，包括前端开发、后端开发等
-- **学习笔记**：记录机器学习、深度学习等学习内容
-- **日常记录**：记录工作和生活中的重要事件和总结
-- **项目文档**：记录项目相关的API文档、设计文档等
-- **资源整理**：整理优质的技术资源和博客推荐
+## 本地预览
 
-### 使用指南
+如果你安装了 Python (Mac/Linux 通常预装):
 
-1. **浏览笔记**：在左侧导航栏中选择感兴趣的笔记分类和具体笔记
-2. **搜索功能**：在页面顶部的搜索框中输入关键词，可搜索所有笔记内容
-3. **主题切换**：点击页面右上角的主题切换按钮，可在暗黑和明亮主题之间切换
-4. **页面内导航**：在右侧可查看当前页面的目录结构，点击可快速跳转到对应位置
+```bash
+cd docs
+python3 -m http.server 3000
+```
 
-## 关于
+或者如果你安装了 Node.js，可以使用 `docsify-cli`:
 
-- 使用 [Docsify](https://docsify.js.org/) 构建
-- 托管在 [GitHub Pages](https://pages.github.com/)
-- 支持响应式设计，适配不同设备
+```bash
+npm i docsify-cli -g
+docsify serve docs
+```
 
-## 许可证
+访问 `http://localhost:3000` 查看效果。
 
-[MIT](https://github.com/yourusername/notes/blob/master/LICENSE)
+## 部署
+
+本项目已配置为支持 GitHub Pages。
+请在 GitHub 仓库设置中，将 GitHub Pages Source 设置为 `master` 分支的 `/docs` 文件夹。

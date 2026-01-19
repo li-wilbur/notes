@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>个人笔记</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <!-- 默认主题 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" title="vue">
+  <!-- Dark/Light Theme -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css" title="darklight-theme" type="text/css" />
+  <style>
+    /* 自定义样式优化 */
+    .sidebar-nav > ul > li > ul > li > a {
+        font-size: 14px;
+    }
+    /* 让侧边栏支持滚动 */
+    .sidebar {
+        padding-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">加载中...</div>
+  <script>
+    window.$docsify = {
+      name: '个人笔记',
+      repo: '', // 如果有GitHub仓库地址可填入
+      loadSidebar: true,
+      subMaxLevel: 3,
+      sidebarDisplayLevel: 1, // 默认折叠级别
+      auto2top: true,
+      search: {
+        paths: 'auto',
+        placeholder: '🔍 搜索',
+        noData: '😒 找不到结果',
+        depth: 6,
+      },
+      // 暗黑模式配置
+      darklightTheme: {
+        siteFont: "PT Sans",
+        defaultTheme : 'light',
+        codeFontFamily : 'Roboto Mono, Monaco, courier, monospace',
+        bodyFontSize : '17px',
+        dark: {
+          accent: '#42b983',
+          toogleBackground : '#ffffff',
+          background: '#091a28',
+          textColor: '#b4b4b4',
+          codeTextColor : '#ffffff',
+          codeBackgroundColor : '#0e2233',
+          borderColor : '#0d2538',
+          blockQuoteColour : '#858585',
+          highlightColor : '#d22778',
+          sidebarSublink : '#b4b4b4',
+          codeTypeColor : '#ffffff',
+          coverBackground : 'linear-gradient(to left bottom, hsl(118, 100%, 85%) 0%,hsl(224, 100%, 85%) 100%)',
+          toogleImage : 'url(https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/icons/sun.svg)'
+        },
+        light: {
+          accent: '#42b983',
+          toogleBackground : '#091a28',
+          background: '#ffffff',
+          textColor: '#34495e',
+          codeTextColor : '#525252',
+          codeBackgroundColor : '#f8f8f8',
+          borderColor : 'rgba(0, 0, 0, 0.07)',
+          blockQuoteColour : '#858585',
+          highlightColor : '#d22778',
+          sidebarSublink : '#505d6b',
+          codeTypeColor : '#091a28',
+          coverBackground : 'linear-gradient(to left bottom, hsl(118, 100%, 85%) 0%,hsl(224, 100%, 85%) 100%)',
+          toogleImage : 'url(https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/icons/moon.svg)'
+        }
+      }
+    }
+  </script>
+  <!-- Docsify Core -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <!-- Plugins -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <!-- Dark/Light Theme Plugin -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
+  <!-- Prism Highlighting -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-javascript.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-css.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-markdown.min.js"></script>
+</body>
+</html>
