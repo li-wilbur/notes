@@ -1,4 +1,4 @@
-![logo](https://cdn.jsdelivr.net/npm/docsify@4/lib/favicon.ico)
+![logo](https://github.com/fluidicon.png)
 # 个人笔记
 
 > 现代化的个人知识管理平台
