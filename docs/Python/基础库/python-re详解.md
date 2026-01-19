@@ -120,8 +120,7 @@ print(result.group())  # 输出: 3
 
 *   **提取 URL**：
     ```python
-    pattern = r'https?://[^
-]+'
+    pattern = r'https?://[^ ]+'
     ```
 
 *   **替换 HTML 标签**：
